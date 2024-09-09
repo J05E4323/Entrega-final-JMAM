@@ -1,0 +1,66 @@
+// Login Container
+.login-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    @include border-radius(10px);
+    @include box-shadow;
+  
+    .register-section {
+      flex-basis: 50%;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+  
+    .login-section {
+      flex-basis: 50%;
+      padding: 20px;
+    }
+  
+    h3 {
+      margin-top: 10;
+    }
+  
+    form {
+      margin-top: 20px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+  
+    .form-btn {
+      background-color: #4caf50;
+      color: $white-color;
+      padding: 10px 20px;
+      border: none;
+      @include border-radius(5px);
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #3e8e41;
+      }
+    }
+  }
+  
+  .login {
+    // estilos para desktop
+  
+    @include responsive("tablet");
+    @include responsive("mobile");
+  }
+  

@@ -1,0 +1,54 @@
+// _responsive.scss
+
+@media (max-width: 1024px) { /* Tablets */
+  .cont-cat {
+    grid-template-columns: 1fr;
+    .cat-etiquetas {
+      display: none; /* Ocultar las etiquetas en tablet */
+    }
+
+    .grid-prod .card {
+      width: 200px; /* Reducir el tamaño de las tarjetas en tablet */
+      height: 280px;
+    }
+  }
+
+  .s-columnas {
+    grid-template-columns: 1fr;
+  }
+
+  .h-contenedor-principal .h-columnas {
+    grid-template-columns: 1fr;
+  }
+
+  .contenedor .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile */
+  .cont-cat {
+    grid-template-columns: 1fr; /* Mostrar una columna */
+    .cat-etiquetas {
+      display: none; /* Ocultar las etiquetas */
+    }
+
+    .grid-prod .card {
+      width: 100%; /* Las tarjetas ocupan el 100% */
+      margin-bottom: 20px;
+    }
+  }
+
+  .s-columnas {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .contenedor {
+    padding: 1.5rem;
+  }
+
+  .h-contenedor-principal .h-columnas {
+    grid-template-columns: 1fr;
+  }
+}

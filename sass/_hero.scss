@@ -1,0 +1,113 @@
+// Hero Principal
+.h-contenedor-principal {
+    background-color: $white-color;
+    margin: 85px 20px 0;
+    padding: 10%;
+    @include border-radius(10px);
+    @include box-shadow;
+  
+    .h-columnas {
+      display: grid;
+      grid-template-columns: 40% 30% 30%;
+  
+      h2 {
+        font-family: $header-font;
+      }
+  
+      .h-btn {
+        background-color: $primary-color;
+        padding: 10px;
+        @include border-radius(15px);
+        border: 1px solid $white-color;
+        text-decoration: none;
+        color: $white-color;
+        display: block;
+        margin-top: 20px;
+      }
+    }
+  }
+  
+  @include responsive("mobile") {
+    .h-contenedor-principal .h-columnas h2 {
+      display: none;
+    }
+  }
+  
+  // Secciones de dos columnas y Hero-f
+  .dos-col-content,
+  .hero-f {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    padding: 5%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  @include responsive("tablet") {
+    .dos-col-content,
+    .hero-f {
+      margin-top: 60px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+  
+      img {
+        order: 2;
+      }
+  
+      .content-hero-f,
+      article {
+        order: 1;
+        text-align: center;
+      }
+    }
+  }
+  
+  @include responsive("mobile") {
+    .dos-col-content,
+    .hero-f {
+      margin-top: 60px;
+      grid-template-columns: 1fr;
+      gap: 15px;
+  
+      img {
+        order: 2;
+      }
+  
+      .content-hero-f,
+      article {
+        order: 1;
+        text-align: center;
+        padding: 0 10px;
+      }
+    }
+  }
+  
+  // About Banner
+  .about-banner {
+    background-color: $secondary-color;
+    @include flex-center;
+    padding: 20px 400px;
+    margin-top: 10px;
+  
+    p {
+      text-align: center;
+    }
+  }
+  
+  @include responsive("tablet") {
+    .about-banner {
+      padding: 20px;
+    }
+  }
+  
+  @include responsive("mobile") {
+    .about-banner {
+      padding: 20px;
+    }
+  }

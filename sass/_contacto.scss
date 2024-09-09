@@ -1,0 +1,94 @@
+// Contacto
+.contenedor {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #9dba64;
+    overflow: hidden;
+    @include flex-center;
+  
+    .form {
+      width: 100%;
+      max-width: 820px;
+      background-color: $white-color;
+      @include border-radius(10px);
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+  
+      .contact-info,
+      .contact-form {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+  
+      .contact-form {
+        background-color: #4a572f;
+        position: relative;
+  
+        &::before {
+          content: "";
+          position: absolute;
+          width: 26px;
+          height: 26px;
+          background-color: $white-color;
+          transform: rotate(45deg);
+          top: 50px;
+          left: -13px;
+        }
+      }
+  
+      .form-btn {
+        padding: 10px;
+        @include border-radius(10px);
+        margin-top: 20px;
+      }
+    }
+  }
+  
+  @include responsive("tablet") {
+    .contenedor .form {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+  
+      .contact-info,
+      .contact-form {
+        padding: 1.5rem;
+      }
+  
+      .contact-form::before {
+        top: -13px;
+        left: initial;
+        right: 50px;
+      }
+    }
+  }
+  
+  @include responsive("small-mobile") {
+    .contenedor {
+      padding: 1.5rem;
+  
+      .form {
+        gap: 10px;
+      }
+  
+      .contact-info,
+      .contact-form {
+        padding: 1rem;
+      }
+  
+      .contact-form::before {
+        display: none;
+      }
+  
+      .form-btn {
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  }

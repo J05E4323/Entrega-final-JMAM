@@ -1,0 +1,45 @@
+// _navbar.scss
+.navbar {
+    background-color: $white-color;
+    margin: 10px;
+    @include border-radius;
+    @include box-shadow;
+  
+    .login-button {
+      background-color: $accent-color;
+      padding: 8px 20px;
+      @include border-radius(10px);
+      text-decoration: none;
+      color: $text-color;
+  
+      &:hover {
+        color: $white-color;
+      }
+    }
+  
+    .dropdown-item {
+      &:active {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  
+    .navbar-toggler {
+      border: none;
+  
+      &:focus,
+      .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  
+    .nav-link {
+      color: $text-color;
+  
+      &.active,
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  

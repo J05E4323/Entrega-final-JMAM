@@ -1,0 +1,36 @@
+// _global.scss
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    background-color: $background-color;
+  }
+  
+  h1 {
+    font-family: $header-font;
+    font-weight: 600;
+    font-style: normal;
+    font-size: $h1-font-size;
+  }
+  
+  h3 {
+    font-family: $body-font;
+    font-weight: $h3-font-weight;
+  }
+  
+  p {
+    text-align: justify;
+  }
+  
+  header {
+    background-color: $background-color;
+  }
+
+  main{
+    background-color: $background-color;
+
+  }
+  
